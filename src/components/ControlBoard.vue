@@ -36,32 +36,16 @@ async function CTL(s) {
 <template>
   <div class="flex pb-5 mb-5 border-b-slate-700 border-b-2">
     <div class="">
-      <IButton
-        v-if="!systatus.isRunning"
-        @click="CTL(1)"
-        class="w-[48px] px-2 py-1.5"
-        :text="'RUN'"
-        :disabled="
-          !systatus.isAuthenticated || systatus.isBusy || systatus.isRunning
-        "
-      >
+      <IButton v-if="!systatus.isRunning" @click="CTL(1)" class="w-[48px] px-2 py-1.5" :text="'RUN'" :disabled="!systatus.isAuthenticated || systatus.isBusy || systatus.isRunning
+        ">
       </IButton>
-      <IButton
-        v-else
-        @click="CTL(0)"
-        class="w-[48px] px-2 py-1.5"
-        :text="'STOP'"
-        :disabled="
-          !systatus.isAuthenticated || systatus.isBusy || !systatus.isRunning
-        "
-      >
+      <IButton v-else @click="CTL(0)" class="w-[48px] px-2 py-1.5" :text="'STOP'" :disabled="!systatus.isAuthenticated || systatus.isBusy || !systatus.isRunning
+        ">
       </IButton>
     </div>
     <div class="ml-auto">
-      <span
-        :class="alertHidden ? 'hidden' : ''"
-        class="animate-pulse my-auto font-sans text-xs font-bold uppercas text-orange-700"
-      >
+      <span :class="alertHidden ? 'hidden' : ''"
+        class="animate-pulse my-auto font-sans text-xs font-bold uppercas text-orange-700">
         {{ alertText }}
       </span>
     </div>

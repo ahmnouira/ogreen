@@ -121,65 +121,34 @@ function wsq__deletestrategy(result) {
 </script>
 <template>
   <div class="mb-3 flex">
-    <select
-      v-if="!newStrategy"
+    <select v-if="!newStrategy"
       class="text-sm font-mono w-[10rem] rounded-xs px-2.5 dark:bg-gray-900 dark:border-gray-900 dark:placeholder-gray-400 dark:text-gray-400"
-      ref="sselect"
-      @change="onChange"
-    >
+      ref="sselect" @change="onChange">
       <option value="">{{ switchLbl }}</option>
       <option v-for="strategy in uicommon.systrategies" :value="strategy">
         {{ strategy }}
       </option>
     </select>
-    <input
-      v-else
-      v-model="newStrategyName"
-      type="text"
-      :placeholder="switchLbl"
-      class="text-sm font-mono w-[10rem] rounded-xs py-0.5 px-2.5 dark:bg-gray-900 dark:border-b-2 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-400 focus:!outline-none dark:focus:border-b-2 dark:focus:border-orange-700 dark:active:border-orange-700"
-    />
-    <IButton
-      class="w-[48px] ml-4 px-2 py-1.5"
-      :text="'SAVE'"
-      :disabled="!systore.isAuthenticated || saving"
-      @click="Save"
-    >
+    <input v-else v-model="newStrategyName" type="text" :placeholder="switchLbl"
+      class="text-sm font-mono w-[10rem] rounded-xs py-0.5 px-2.5 dark:bg-gray-900 dark:border-b-2 dark:border-gray-500 dark:placeholder-gray-400 dark:text-gray-400 focus:!outline-none dark:focus:border-b-2 dark:focus:border-orange-700 dark:active:border-orange-700" />
+    <IButton class="w-[48px] ml-4 px-2 py-1.5" :text="'SAVE'" :disabled="!systore.isAuthenticated || saving"
+      @click="Save">
     </IButton>
-    <IButton
-      class="w-[48px] ml-4 px-2 py-1.5"
-      :text="switchText"
-      :disabled="!systore.isAuthenticated"
-      @click="sinputSwitch"
-    >
+    <IButton class="w-[48px] ml-4 px-2 py-1.5" :text="switchText" :disabled="!systore.isAuthenticated"
+      @click="sinputSwitch">
     </IButton>
-    <IButton
-      class="w-[48px] ml-4 px-2 py-1.5"
-      text="Delete"
-      :disabled="!systore.isAuthenticated || deleting"
-      @click="Delete"
-    >
+    <IButton class="w-[48px] ml-4 px-2 py-1.5" text="Delete" :disabled="!systore.isAuthenticated || deleting"
+      @click="Delete">
     </IButton>
-    <IButton
-      class="w-[48px] ml-4 px-2 py-1.5"
-      :text="modeText"
-      @click="modeChange"
-    >
+    <IButton class="w-[48px] ml-4 px-2 py-1.5" :text="modeText" @click="modeChange">
     </IButton>
     <div class="flex ml-auto">
-      <span
-        :class="alertHidden ? 'hidden' : ''"
-        class="animate-pulse my-auto font-sans text-xs font-bold uppercas text-orange-700"
-      >
+      <span :class="alertHidden ? 'hidden' : ''"
+        class="animate-pulse my-auto font-sans text-xs font-bold uppercas text-orange-700">
         {{ alertText }}
       </span>
     </div>
   </div>
-  <MonacoEditor
-    v-if="modeText == 'Config'"
-    ref="editorCode"
-    lang="python"
-    inputref="scode"
-  />
+  <MonacoEditor v-if="modeText == 'Config'" ref="editorCode" lang="python" inputref="scode" />
   <MonacoEditor v-else ref="editorConf" lang="json" inputref="sconf" />
 </template>

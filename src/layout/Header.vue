@@ -3,6 +3,7 @@ import { useConnectionStore } from '../stores/connection';
 
 const connectionStore = useConnectionStore();
 </script>
+
 <template>
   <header class="col-span-full p-4 bg-slate-400 dark:bg-[#02051273]">
     <div class="flex justify-between">
