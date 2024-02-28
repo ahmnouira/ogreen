@@ -1,11 +1,22 @@
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
-    text: { type: String },
+    title: { type: String, required: true },
+    description: { type: String, required: true },
+    value: { type: String, required: true }
 });
 </script>
 
 <template>
-    <div class="h-36 flex justify-center items-center dark:bg-zinc-900">
-        <h1 class="text-2xl font-semibold">{{ props.text }}</h1>
+    <div class="flex dark:bg-zinc-900">
+        <div class="flex flex-col w-full">
+            <div class="border-b-4 border-orange-700">
+                <h2 class="text-2xl font-semibold m-4">{{ props.title }}</h2>
+            </div>
+            <p class="text-sm text-gray-700 m-4">{{ props.description }}</p>
+        </div>
+        <div class="flex items-end border-l-4 border-orange-700 p-2">
+            <h3 class="text-3xl font-bold text-green-700">{{ props.value }}</h3>
+        </div>
     </div>
 </template>
+

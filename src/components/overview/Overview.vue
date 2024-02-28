@@ -7,7 +7,6 @@ import Terminal from './terminal/Terminal.vue'
 
 <template>
     <OverviewHeader />
-    <OverviewInfo />
     <OverviewCards />
     <Terminal />
 </template>
