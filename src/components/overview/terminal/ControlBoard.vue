@@ -1,6 +1,6 @@
 <script setup>
 import { inject, ref } from "vue";
-import { useSystemStore } from "../stores/system";
+import { useSystemStore } from "@/stores/system";
 
 const alertHidden = ref(false);
 const alertText = ref("");

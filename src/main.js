@@ -4,13 +4,9 @@ import App from "./App.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import editorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 import jsonWorker from "monaco-editor/esm/vs/language/json/json.worker?worker";
-import Terminal from "./pages/Terminal.vue";
 import Overview from "./pages/Overview.vue";
 import ConnectionForm from "./components/ConnectionForm.vue";
-import ControlBoard from "./components/ControlBoard.vue";
-import Log from "./components/shared/Log.vue";
 import IButton from "./components/IButton.vue";
-import SystemStatus from "./components/terminal/SystemStatus.vue";
 import Strategies from "./components/Strategies.vue";
 import MonacoEditor from "./components/MonacoEditor.vue";
 import Configuration from "./components/Configuration.vue";
@@ -20,11 +16,6 @@ import "./index.css";
 const routes = [
   {
     path: "/",
-    name: "Terminal",
-    component: Terminal,
-  },
-  {
-    path: "/overview",
     name: "Overview",
     component: Overview,
   },
@@ -61,11 +52,8 @@ self.MonacoEnvironment = {
   },
 };
 
-app.component("Log", Log);
 app.component("ConnectionForm", ConnectionForm);
-app.component("ControlBoard", ControlBoard);
 app.component("IButton", IButton);
-app.component("SystemStatus", SystemStatus);
 app.component("MonacoEditor", MonacoEditor);
 app.component("Configuration", Configuration);
 

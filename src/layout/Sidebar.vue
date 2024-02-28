@@ -5,10 +5,7 @@
     </div>
     <ul class="mt-6">
       <li class="mb-2">
-        <router-link class="block p-3 text-sm uppercase" to="/">Terminal</router-link>
-      </li>
-      <li class="mb-2">
-        <router-link class="block p-3 text-sm uppercase" to="/overview">Overview</router-link>
+        <router-link class="block p-3 text-sm uppercase" to="/">Overview</router-link>
       </li>
       <li class="mb-2">
         <router-link class="block p-3 text-sm uppercase" to="/strategies">Strategies</router-link>

@@ -1,6 +1,6 @@
 <script setup>
 import { onUpdated, ref } from "vue";
-import { useLoggerStore } from "../../stores/logger";
+import { useLoggerStore } from "@/stores/logger";
 
 const log = useLoggerStore();
 const logconsole = ref(null);

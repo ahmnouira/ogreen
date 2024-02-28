@@ -14,7 +14,7 @@ systore.wsquinch = wsquinch;
 uicommon.wsquinch = wsquinch;
 wsquinch.setconnectionstore(connection);
 wsquinch.resolvers = [log, systore, uicommon];
-console.log(wsquinch)
+
 
 import Layout from "./layout/Layout.vue"
 
