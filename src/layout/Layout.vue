@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import Header from "./Header.vue"
+import Footer from "./Footer.vue";
+import Sidebar from "./Sidebar.vue";
+</script>
+
 <template>
   <div class="m-auto grid grid-cols-12 gap-1 text-black dark:text-white">
     <Header />
@@ -8,15 +14,3 @@
     <Footer />
   </div>
 </template>
-
-<script>
-import Header from "./Header.vue";
-import Footer from "./Footer.vue";
-import Sidebar from "./Sidebar.vue";
-
-export default {
-  name: "Layout",
-  components: { Header, Sidebar, Footer },
-};
-</script>
-

@@ -1,6 +1,5 @@
-<script setup>
+<script setup lang="ts">
 import { useConnectionStore } from '../stores/connection';
-
 const connectionStore = useConnectionStore();
 </script>
 

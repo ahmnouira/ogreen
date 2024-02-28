@@ -1,3 +1,8 @@
+<script setup>
+import IButton from '../IButton.vue';
+import Divider from '../shared/Divider.vue';
+</script>
+
 <template>
     <div class="mb-4">
         <div class="flex justify-between">
@@ -7,13 +12,3 @@
         <Divider />
     </div>
 </template>
-<script>
-import IButton from '../IButton.vue';
-import Divider from '../shared/Divider.vue';
-
-export default {
-    name: "OverviewHeader",
-    components: { IButton, Divider }
-};
-</script>
-
