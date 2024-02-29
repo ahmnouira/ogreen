@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useConnectionStore } from '../stores/connection';
+import { useConnectionStore } from "../stores/connection";
 const connectionStore = useConnectionStore();
 </script>
 
@@ -9,7 +9,10 @@ const connectionStore = useConnectionStore();
       <ConnectionForm />
       <div class="flex items-center ml-5">
         <span class="text-xs uppercase tracking-wide">Status</span>
-        <div class="h-2 w-2 ml-2 bg-green-500 rounded-full" v-if="connectionStore.isConnected"></div>
+        <div
+          class="h-2 w-2 ml-2 bg-green-500 rounded-full"
+          v-if="connectionStore.isConnected"
+        ></div>
         <div class="h-2 w-2 ml-2 bg-red-500 rounded-full" v-else></div>
       </div>
     </div>

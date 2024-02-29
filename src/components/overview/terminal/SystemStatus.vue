@@ -5,7 +5,8 @@ const systore = useSystemStore();
 <template>
   <div class="flex space-x-12">
     <div
-      class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-0 mb-4 pb-5 font-mono text-sm antialiased border-b-slate-700 border-b-2">
+      class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-0 mb-4 pb-5 font-mono text-sm antialiased border-b-slate-700 border-b-2"
+    >
       <div class="font-semibold">Mode</div>
       <div class="w-auto">{{ systore.getestate.mode }}</div>
       <div class="font-semibold">Engine cores</div>
@@ -24,7 +25,8 @@ const systore = useSystemStore();
       <div class="w-auto">{{ systore.getestate.ewstreamon }}</div>
     </div>
     <div
-      class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-0 mb-4 pb-5 font-mono text-sm antialiased border-b-slate-700 border-b-2">
+      class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-0 mb-4 pb-5 font-mono text-sm antialiased border-b-slate-700 border-b-2"
+    >
       <div class="font-semibold">Stream-to-memory</div>
       <div class="w-auto">{{ systore.getestate.perf.stomem }} μs</div>
       <div class="font-semibold">Engine consume-cycle</div>
@@ -43,7 +45,8 @@ const systore = useSystemStore();
       <div class="w-auto">{{ systore.getestate.perf.euptime }}</div>
     </div>
     <div
-      class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-0 mb-4 pb-5 font-mono text-sm antialiased border-b-slate-700 border-b-2">
+      class="grid grid-cols-[auto,1fr] gap-x-4 gap-y-0 mb-4 pb-5 font-mono text-sm antialiased border-b-slate-700 border-b-2"
+    >
       <div class="font-semibold">WSE</div>
       <div class="w-auto">{{ systore.getestate.perf.wsticks }} ticks</div>
       <div class="font-semibold">WSE</div>

@@ -3,5 +3,5 @@ import Overview from "../components/overview/Overview.vue";
 </script>
 
 <template>
-    <Overview />
+  <Overview />
 </template>

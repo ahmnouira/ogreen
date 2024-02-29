@@ -1,12 +1,19 @@
 <script setup>
-import OverviewCards from "./OverviewCards.vue"
+import MarketPerformancePanel from "./MarketPerformancePanel.vue";
+import OverviewCards from "./OverviewCards.vue";
 import OverviewHeader from "./OverviewHeader.vue";
 import OverviewInfo from "./OverviewInfo.vue";
-import Terminal from './terminal/Terminal.vue'
+import Terminal from "./terminal/Terminal.vue";
 </script>
 
 <template>
-    <OverviewHeader />
-    <OverviewCards />
-    <Terminal />
+  <OverviewHeader />
+  <!-- <OverviewInfo /> -->
+  <div class="my-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <OverviewCards />
+      <MarketPerformancePanel />
+    </div>
+  </div>
+  <Terminal />
 </template>

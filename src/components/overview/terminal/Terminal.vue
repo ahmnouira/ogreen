@@ -9,4 +9,3 @@ import Log from "./Log.vue";
   <ControlBoard />
   <Log />
 </template>
-

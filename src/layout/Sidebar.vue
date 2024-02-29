@@ -5,13 +5,19 @@
     </div>
     <ul class="mt-6">
       <li class="mb-2">
-        <router-link class="block p-3 text-sm uppercase" to="/">Overview</router-link>
+        <router-link class="block p-3 text-sm uppercase" to="/"
+          >Overview</router-link
+        >
       </li>
       <li class="mb-2">
-        <router-link class="block p-3 text-sm uppercase" to="/strategies">Strategies</router-link>
+        <router-link class="block p-3 text-sm uppercase" to="/strategies"
+          >Strategies</router-link
+        >
       </li>
       <li class="mb-2">
-        <router-link to="/configuration" class="block p-3">Configuration</router-link>
+        <router-link to="/configuration" class="block p-3"
+          >Configuration</router-link
+        >
       </li>
       <li class="mb-2">
         <a href="#" class="block p-3">Stats</a>
