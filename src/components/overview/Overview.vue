@@ -3,7 +3,7 @@ import MarketPerformancePanel from "./MarketPerformancePanel.vue";
 import OverviewCards from "./OverviewCards.vue";
 import OverviewHeader from "./OverviewHeader.vue";
 import OverviewInfo from "./OverviewInfo.vue";
-import Terminal from "./terminal/Terminal.vue";
+import Log from "./terminal/Log.vue";
 </script>
 
 <template>
@@ -15,5 +15,5 @@ import Terminal from "./terminal/Terminal.vue";
       <MarketPerformancePanel />
     </div>
   </div>
-  <Terminal />
+  <Log />
 </template>

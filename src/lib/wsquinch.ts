@@ -1,6 +1,11 @@
 import { Squinchws } from "./squinchws";
 
 export default class Wsquinch {
+  private wsocket;
+  private rprefix;
+  private resolvers;
+  private rresolvers;
+
   constructor() {
     this.wsocket = new Squinchws();
     this.wsocket.onmessage = this.onmessage.bind(this);
@@ -20,8 +25,8 @@ export default class Wsquinch {
     await this.wsocket.send(JSON.stringify(payload));
   }
 
-  async query(queries) {
-    let qyrs = [];
+  async query(queries: any) {
+    let qyrs: any[] = [];
     for (const key of Object.keys(queries)) {
       const value = queries[key];
       qyrs.push({ n: key, v: value });
@@ -29,8 +34,8 @@ export default class Wsquinch {
     await this.send(qyrs, null);
   }
 
-  async action(actions) {
-    let acs = [];
+  async action(actions: any) {
+    let acs: any[] = [];
     for (const key of Object.keys(actions)) {
       const value = actions[key];
       acs.push({ n: key, v: value });
@@ -72,7 +77,6 @@ export default class Wsquinch {
   }
 
   // backend ws
-
   connect(remoteaddress) {
     return this.wsocket.connect(remoteaddress);
   }
