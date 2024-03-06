@@ -1,5 +1,5 @@
 <script setup>
-import Header from "./Header.vue";
+import Header from "./header/Header.vue";
 import Footer from "./Footer.vue";
 import Sidebar from "./Sidebar.vue";
 </script>

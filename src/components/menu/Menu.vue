@@ -16,5 +16,7 @@ const props = defineProps({
     aria-orientation="vertical"
     aria-labelledby="menu-button"
     tabindex="-1"
-  ></div>
+  >
+    Menu
+  </div>
 </template>

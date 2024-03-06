@@ -15,9 +15,7 @@ uicommon.wsquinch = wsquinch;
 wsquinch.setconnectionstore(connection);
 wsquinch.resolvers = [log, systore, uicommon];
 import Layout from "./layout/Layout.vue";
-import Landing from "./landing/Landing.vue";
 </script>
 <template>
-  <Landing />
   <Layout />
 </template>
