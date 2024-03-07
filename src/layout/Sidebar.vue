@@ -5,11 +5,6 @@ import Divider from "@/components/shared/Divider.vue";
 
 <template>
   <aside class="col-span-2 bg-slate-400 dark:bg-zinc-900">
-    <div class="p-4">
-      <ItemInfo :title="'Location'" :value="'Japan'" />
-      <ItemInfo :title="'CPU'" :value="'3.7%'" />
-    </div>
-    <Divider />
     <div class="p-2 mt-4">
       <ul>
         <li class="mb-2">
