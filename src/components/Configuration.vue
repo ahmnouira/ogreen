@@ -44,7 +44,7 @@ function Save() {
 function wsq__saveconfig(result) {
   alert(result, "Saved");
 }
-</script>    
+</script>
 <template>
   <div class="mb-3 flex">
     <IButton

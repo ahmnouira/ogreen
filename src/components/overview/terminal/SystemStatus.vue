@@ -1,5 +1,5 @@
 <script setup>
-import { useSystemStore } from "../stores/system";
+import { useSystemStore } from "@/stores/system";
 const systore = useSystemStore();
 </script>
 <template>

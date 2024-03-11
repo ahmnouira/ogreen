@@ -1,11 +1,10 @@
 export class Squinchws {
-  constructor() {
-    this.remoteaddress = null;
-    this.url = null;
-    this.instance = null;
-    this.store = null;
-    this.onmessage = null;
-  }
+  private remoteaddress;
+  private error;
+  private store;
+  private url;
+  private instance;
+  private onmessage;
 
   connect(remoteaddress) {
     this.remoteaddress = remoteaddress.trim();
